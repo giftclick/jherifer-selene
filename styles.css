@@ -756,7 +756,7 @@ footer>p {
 }
 
 .time {
-  font-size: 2em;
+  font-size: 2em!important;
   margin-top: 15px;
   border: 2px solid #b37e34;
   padding: 10px;
