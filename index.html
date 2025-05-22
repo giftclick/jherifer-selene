@@ -775,8 +775,10 @@
         <div class="contenedor">
             <img src="./assets/b9.jpg" alt="Descripción de la imagen" class="image-reveal">
         </div>
-        <img src="./assets/rana.png" alt="Rosa decorativa" id="rana" class="decorative-rose reveal"
-            style="margin-top: 25px;" />
+        <div style="text-align: center;">
+            <img src="./assets/rana.png" alt="Rosa decorativa" id="rana" class="decorative-rose reveal"
+                style="margin-top: 25px;" />
+        </div>
         <div id="ron"> Desarrollado con <span class="heartfooter">♡</div>
         <footer>
             <div class="footergitfclick">
@@ -799,6 +801,32 @@
             <br>
             <p class="footnumber">Invitaciones virtuales <br> <br>+51 967707229</p>
         </footer>
+        <div id="music-player-bar">
+            <div id="player-content">
+                <div id="track-info">
+                    <div id="track-title">Mi Canción</div>
+                    <div id="track-controls">
+                        <button id="play-btn" style="padding-right: -8px !important;">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </button>
+                        <button id="pause-btn" style="padding-right: 5px !important;">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                                <line x1="10" y1="4" x2="10" y2="20"></line>
+                                <line x1="18" y1="4" x2="18" y2="20"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="progress-container">
+                    <div id="progress-bar">
+                        <div id="progress-current"></div>
+                    </div>
+                    <div id="time-display">00:00</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script>
@@ -823,32 +851,6 @@
         observer.observe(el);
     });
 </script>
-<div id="music-player-bar">
-    <div id="player-content">
-        <div id="track-info">
-            <div id="track-title">Mi Canción</div>
-            <div id="track-controls">
-                <button id="play-btn" style="padding-right: -8px !important;">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
-                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                </button>
-                <button id="pause-btn" style="padding-right: 5px !important;">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
-                        <line x1="10" y1="4" x2="10" y2="20"></line>
-                        <line x1="18" y1="4" x2="18" y2="20"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="progress-container">
-            <div id="progress-bar">
-                <div id="progress-current"></div>
-            </div>
-            <div id="time-display">00:00</div>
-        </div>
-    </div>
-</div>
 <style>
     #music-player-bar {
 
