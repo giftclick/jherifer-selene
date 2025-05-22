@@ -44,6 +44,7 @@ a[href^="tel"] {
   font-size: 64px;
   color: #7b9ab6;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 

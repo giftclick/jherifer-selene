@@ -8,10 +8,10 @@
 }
 
 @font-face {
-    font-family: 'Snell Bold';
-    src: url('./SnellBT-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Snell Bold';
+  src: url('./SnellBT-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 a[href^="tel"] {
@@ -141,6 +141,7 @@ body {
   font-size: 64px;
   color: #7b9ab6;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .subtitle {
@@ -754,10 +755,19 @@ footer>p {
   margin-bottom: 16px;
 }
 
+.time {
+  font-size: 2em;
+  margin-top: 15px;
+  border: 2px solid #b37e34;
+  padding: 10px;
+  border-radius: 8px;
+  margin-inline: 12px;
+}
+
 .card p {
   font-size: 1em;
   line-height: 1.6;
-  /*! text-align: justify; */
+  text-align: center;
 }
 
 .highlight {
