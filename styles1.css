@@ -28,9 +28,9 @@ a[href^="tel"] {
   font-weight: inherit !important;
   line-height: inherit !important;
   box-shadow: none !important;
-
-
+  background-color: #ffffff00;
 }
+
 
 .title {
   font-family: "Herr Von Muellerhoff", cursive;
