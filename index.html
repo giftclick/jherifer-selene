@@ -570,47 +570,48 @@
                     </div>
                 </div>
                 <script>
-                  document.addEventListener('DOMContentLoaded', function () {
-                    let rawParam = window.location.search.substring(1);
-                
-                    // Reemplazar "+" por espacio (algunos navegadores los interpretan como espacios)
-                    rawParam = rawParam.replace(/\+/g, ' ');
-                
-                    // Decodificar múltiples veces por seguridad
-                    let decoded = rawParam;
-                    let previous;
-                    do {
-                      previous = decoded;
-                      try {
-                        decoded = decodeURIComponent(decoded);
-                      } catch (e) {
-                        console.warn("No se pudo decodificar completamente:", e);
-                        break;
-                      }
-                    } while (decoded !== previous);
-                
-                    // Dividir por guiones
-                    const parts = decoded.split('-');
-                
-                    if (parts.length >= 3) {
-                      const firstName = parts[0].trim();
-                      const lastName = parts[1].trim();
-                      const numPasses = parts[2].trim();
-                
-                      document.getElementById('name').textContent = `${firstName} ${lastName}`;
-                      document.getElementById('passnumbers').textContent = numPasses;
-                
-                       if (numPasses === "1") {
-                            passesTitle.textContent = "Pase";
-                            placesText.textContent = "Lugar";
-                            reservedText.textContent = "Reservado";
-                          } else {
-                            passesTitle.textContent = "Pases";
-                            placesText.textContent = "Lugares";
-                            reservedText.textContent = "Reservados";
-                          }
-                    }
-                  });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        let rawParam = window.location.search.substring(1);
+
+                        rawParam = rawParam.replace(/\+/g, ' ');
+
+                        let decoded = rawParam;
+                        let previous;
+                        do {
+                            previous = decoded;
+                            try {
+                                decoded = decodeURIComponent(decoded);
+                            } catch (e) {
+                                console.warn("No se pudo decodificar completamente:", e);
+                                break;
+                            }
+                        } while (decoded !== previous);
+
+                        const parts = decoded.split('-');
+
+                        if (parts.length >= 3) {
+                            const firstName = parts[0].trim();
+                            const lastName = parts[1].trim();
+                            const numPasses = parts[2].trim();
+
+                            document.getElementById('name').textContent = `${firstName} ${lastName}`;
+                            document.getElementById('passnumbers').textContent = numPasses;
+
+                            const reservedText = document.getElementById('reserved-phrase');
+                            const passesTitle = document.getElementById('passes-title');
+                            const placesText = document.getElementById('places-text');
+
+                            if (numPasses === "1") {
+                                passesTitle.textContent = "Pase";
+                                placesText.textContent = "Lugar";
+                                reservedText.textContent = "Reservado";
+                            } else {
+                                passesTitle.textContent = "Pases";
+                                placesText.textContent = "Lugares";
+                                reservedText.textContent = "Reservados";
+                            }
+                        }
+                    });
                 </script>
                 <style>
                     #passnumbers {
