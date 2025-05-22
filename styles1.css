@@ -18,6 +18,13 @@ body {
     /* Asegura que el cuerpo ocupe toda la altura de la ventana */
 }
 
+@font-face {
+    font-family: 'Snell Bold';
+    src: url('./SnellBT-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 a[href^="tel"] {
   pointer-events: none;
   cursor: default;
@@ -33,7 +40,7 @@ a[href^="tel"] {
 
 
 .title {
-  font-family: "Herr Von Muellerhoff", cursive;
+  font-family: 'Snell Bold', "Herr Von Muellerhoff", cursive;
   font-size: 64px;
   color: #7b9ab6;
   margin-bottom: 10px;

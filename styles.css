@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Snell Bold';
+    src: url('./SnellBT-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 a[href^="tel"] {
   pointer-events: none;
   cursor: default;
@@ -130,7 +137,7 @@ body {
 
 /* Títulos */
 .title {
-  font-family: "Herr Von Muellerhoff", cursive;
+  font-family: 'Snell Bold', "Herr Von Muellerhoff", cursive;
   font-size: 64px;
   color: #7b9ab6;
   margin-bottom: 10px;
