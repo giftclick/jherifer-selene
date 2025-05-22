@@ -10,9 +10,15 @@
 a[href^="tel"] {
   pointer-events: none;
   cursor: default;
-  text-decoration: none;
-  color: white;
-  background-color: white;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  box-shadow: none !important;
+
+
 }
 
 #Footer_group_1_,
@@ -71,7 +77,8 @@ body {
 
 .contenedor {
   padding-block: 40px;
-  overflow: hidden; /* Oculta cualquier exceso de la imagen */
+  overflow: hidden;
+  /* Oculta cualquier exceso de la imagen */
   background-color: #4679c980;
   margin-block: 20px;
 }
@@ -83,7 +90,8 @@ body {
 .contenedor img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  object-fit: cover;
+  /* Ajusta la imagen sin distorsionarla */
 }
 
 /* Marco fijo PNG */
@@ -96,8 +104,10 @@ body {
   background: url("./assets/perla.png") no-repeat center center;
   background-size: cover;
   z-index: 1000;
-  pointer-events: none; /* para permitir clics en contenido */
-  box-shadow: 21px 62px 23px rgba(0, 0, 0, 0.3); /* sombra al marco */
+  pointer-events: none;
+  /* para permitir clics en contenido */
+  box-shadow: 21px 62px 23px rgba(0, 0, 0, 0.3);
+  /* sombra al marco */
   filter: drop-shadow(-33px 6px 35px #00000096);
 }
 
@@ -196,18 +206,16 @@ body {
   width: 100%;
   height: 100%;
   background: #938885;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 100%,
-    0 0%,
-    10% 0%,
-    10% 95%,
-    90% 95%,
-    90% 5%,
-    0 5%
-  );
+  clip-path: polygon(0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0%,
+      10% 0%,
+      10% 95%,
+      90% 95%,
+      90% 5%,
+      0 5%);
   pointer-events: none;
 }
 
@@ -222,10 +230,8 @@ body {
 }
 
 .indicaciones {
-  background-image: linear-gradient(
-      rgb(255, 255, 255),
-      rgba(80, 123, 209, 0.59)
-    ),
+  background-image: linear-gradient(rgb(255, 255, 255),
+      rgba(80, 123, 209, 0.59)),
     url(assets/one.jpeg);
   background-size: cover;
   background-position: center;
@@ -258,9 +264,10 @@ body {
   font-size: 12px;
 }
 
-.svg-accept > svg {
+.svg-accept>svg {
   width: 100px;
 }
+
 .svg-accept {
   text-align: center;
 }
@@ -311,6 +318,7 @@ a {
   stroke-width: 3.5px;
   fill-opacity: 0;
 }
+
 .anillo-path {
   stroke: #b8780e;
   stroke-width: 1.69px;
@@ -377,10 +385,12 @@ a {
     opacity: 0.3;
     transform: translateY(0px);
   }
+
   50% {
     opacity: 0.7;
     transform: translateY(-15px);
   }
+
   80% {
     opacity: 1;
     transform: translateY(-5px);
@@ -404,9 +414,11 @@ a {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(15%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -416,9 +428,11 @@ a {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(-15%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -546,6 +560,7 @@ a {
   margin-bottom: -29px;
   margin-left: -35px;
 }
+
 #footerlink {
   background-color: transparent;
   margin: 0;
@@ -585,7 +600,7 @@ footer div span {
   margin-top: 25px;
 }
 
-footer > p {
+footer>p {
   font-size: 12px;
 }
 
@@ -616,10 +631,12 @@ footer > p {
     opacity: 0.2;
     transform: translateY(0px);
   }
+
   50% {
     opacity: 0.5;
     transform: translateY(-15px);
   }
+
   70% {
     opacity: 0.7;
     transform: translateY(-5px);
@@ -643,6 +660,7 @@ footer > p {
   margin-block: 25px;
   width: 350px;
 }
+
 /* Posición inicial */
 .reveal {
   transform: translateY(40px);
@@ -696,6 +714,7 @@ footer > p {
   animation: sparkle 3s infinite ease-in-out;
   opacity: 0.7;
 }
+
 .card {
   background-color: white;
   border-radius: 20px;
@@ -769,16 +788,19 @@ footer > p {
 }
 
 @keyframes sparkle {
+
   0%,
   100% {
     transform: scale(0.5);
     opacity: 0.2;
   }
+
   50% {
     transform: scale(1.5);
     opacity: 1;
   }
 }
+
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .title {
