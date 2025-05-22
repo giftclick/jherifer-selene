@@ -570,41 +570,45 @@
                     </div>
                 </div>
                 <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        // Obtener información de la URL
-                        const urlParams = window.location.search;
-
-                        if (urlParams) {
-                            // Quitar el '?' del inicio
-                            const paramsString = urlParams.substring(1);
-
-                            // Decodificar los parámetros de la URL
-                            const decodedParams = decodeURIComponent(paramsString);
-
-                            // Dividir por guiones
-                            const parts = decodedParams.split('-');
-
-                            // Si hay suficientes partes (nombre, apellido, número)
-                            if (parts.length >= 3) {
-                                const firstName = parts[0];
-                                const lastName = parts[1];
-                                const numPasses = parts[2];
-
-                                // Actualizar el contenido de la página
-                                document.getElementById('name').textContent = `${firstName} ${lastName}`;
-                                document.getElementById('passnumbers').textContent = numPasses;
-
-                                // Cambiar singular/plural según el número
-                                if (numPasses === "1") {
-                                    document.getElementById('passes-title').textContent = "Pase";
-                                    document.getElementById('places-text').textContent = "Lugar";
-                                } else {
-                                    document.getElementById('passes-title').textContent = "Pases";
-                                    document.getElementById('places-text').textContent = "Lugares";
-                                }
-                            }
-                        }
-                    });
+                  document.addEventListener('DOMContentLoaded', function () {
+                    let rawParam = window.location.search.substring(1);
+                
+                    // Reemplazar "+" por espacio (algunos navegadores los interpretan como espacios)
+                    rawParam = rawParam.replace(/\+/g, ' ');
+                
+                    // Decodificar múltiples veces por seguridad
+                    let decoded = rawParam;
+                    let previous;
+                    do {
+                      previous = decoded;
+                      try {
+                        decoded = decodeURIComponent(decoded);
+                      } catch (e) {
+                        console.warn("No se pudo decodificar completamente:", e);
+                        break;
+                      }
+                    } while (decoded !== previous);
+                
+                    // Dividir por guiones
+                    const parts = decoded.split('-');
+                
+                    if (parts.length >= 3) {
+                      const firstName = parts[0].trim();
+                      const lastName = parts[1].trim();
+                      const numPasses = parts[2].trim();
+                
+                      document.getElementById('name').textContent = `${firstName} ${lastName}`;
+                      document.getElementById('passnumbers').textContent = numPasses;
+                
+                      if (numPasses === "1") {
+                        document.getElementById('passes-title').textContent = "Pase";
+                        document.getElementById('places-text').textContent = "Lugar";
+                      } else {
+                        document.getElementById('passes-title').textContent = "Pases";
+                        document.getElementById('places-text').textContent = "Lugares";
+                      }
+                    }
+                  });
                 </script>
                 <style>
                     #passnumbers {
