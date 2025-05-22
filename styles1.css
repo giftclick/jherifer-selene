@@ -26,33 +26,72 @@ body {
 }
 
 a[href^="tel"] {
-  pointer-events: none;
-  cursor: default;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-  box-shadow: none !important;
-  background-color: #ffffff00;
+    pointer-events: none;
+    cursor: default;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    box-shadow: none !important;
+    background-color: #ffffff00;
 }
 
 
 .title {
-  font-family: 'Snell Bold', "Herr Von Muellerhoff", cursive;
-  font-size: 64px;
-  color: #7b9ab6;
-  margin-bottom: 10px;
-  text-align: center;
+    font-family: 'Snell Bold', "Herr Von Muellerhoff", cursive;
+    font-size: 64px;
+    color: #7b9ab6;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
+.title-composed {
+    font-family: 'Snell Bold', "Herr Von Muellerhoff", cursive;
+    font-size: 64px;
+    color: #7b9ab6;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto 10px;
+    line-height: 1;
+    position: relative;
+}
+
+/* Primera línea: Jherifer */
+.title-composed .line-1 {
+    padding-left: 10px;
+    /* Ajuste fino para alineación */
+}
+
+/* Segunda línea: & Selene */
+.title-composed .line-2 {
+    margin-top: -10px;
+    padding-left: 50px;
+    /* Esto desplaza la línea como escalón */
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Ampersand más pequeño */
+.title-composed .amp {
+    font-size: 0.45em;
+    margin-right: 5px;
+    position: relative;
+    top: 0.3em;
+    /* Para que "flote" más abajo visualmente */
+}
+
+/* Nombre secundario igual en tamaño a principal */
+.title-composed .second-name {
+    font-size: 1em;
+}
 
 .subtitle {
-  font-family: "Cinzel", serif;
-  font-size: 24px;
-  color: #b37e34;
-  margin-bottom: 40px;
+    font-family: "Cinzel", serif;
+    font-size: 24px;
+    color: #b37e34;
+    margin-bottom: 40px;
 }
 
 .flores {

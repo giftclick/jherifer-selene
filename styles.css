@@ -72,6 +72,47 @@ body {
   margin: auto;
 }
 
+.title-composed {
+  font-family: 'Snell Bold', "Herr Von Muellerhoff", cursive;
+  font-size: 64px;
+  color: #7b9ab6;
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto 10px;
+  line-height: 1;
+  position: relative;
+}
+
+/* Primera línea: Jherifer */
+.title-composed .line-1 {
+  padding-left: 10px;
+  /* Ajuste fino para alineación */
+}
+
+/* Segunda línea: & Selene */
+.title-composed .line-2 {
+  margin-top: -10px;
+  padding-left: 50px;
+  /* Esto desplaza la línea como escalón */
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Ampersand más pequeño */
+.title-composed .amp {
+  font-size: 0.45em;
+  margin-right: 5px;
+  position: relative;
+  top: 0.3em;
+  /* Para que "flote" más abajo visualmente */
+}
+
+/* Nombre secundario igual en tamaño a principal */
+.title-composed .second-name {
+  font-size: 1em;
+}
+
+
 #jireh {
   font-size: 4em;
   margin-block: 55px;
@@ -756,7 +797,7 @@ footer>p {
 }
 
 .time {
-  font-size: 2em!important;
+  font-size: 2em !important;
   margin-top: 15px;
   border: 2px solid #b37e34;
   padding: 10px;
