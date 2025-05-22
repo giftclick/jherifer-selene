@@ -142,8 +142,8 @@
 
         // Esperar a que el DOM esté listo para que los fireflies no queden tapados por otros elementos
         window.addEventListener('DOMContentLoaded', () => {
-            const backgroundFlies = createFireflies(30, true);
-            const foregroundFlies = createFireflies(30, false);
+            const backgroundFlies = createFireflies(10, true);
+            const foregroundFlies = createFireflies(10, false);
             const fireflies = [...backgroundFlies, ...foregroundFlies];
 
             let scrollY = 0;
@@ -336,7 +336,7 @@
         </section>
         <img src="./assets/lagarto.png" alt="Rosa decorativa" class="decorative-rose reveal" />
         <div class="vestimenta-container reveal">
-            <h1 class="title reveal">Codigo de Vestimenta</h1>
+            <h1 class="title reveal">Codigo de<br>Vestimenta</h1>
             <p class="subtitle reveal-left">Formal Elegante </p>
 
             <div class="vestimenta-detalle reveal-left">
