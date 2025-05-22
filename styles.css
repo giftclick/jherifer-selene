@@ -11,8 +11,8 @@ a[href^="tel"] {
   pointer-events: none;
   cursor: default;
   text-decoration: none;
-  color: inherit;
-  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  background-color: white;
 }
 
 #Footer_group_1_,
