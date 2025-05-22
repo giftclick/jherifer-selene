@@ -45,6 +45,7 @@ a[href^="tel"] {
     color: #7b9ab6;
     margin-bottom: 10px;
     text-align: center;
+    padding-left: 30px;
 }
 
 .title-composed {
